@@ -1,0 +1,25 @@
+{
+  "name": "ldt-colorizer",
+  "displayName": "LDT Colorizer",
+  "description": "Syntax highlighting for \"Labor daten transfer\" (LDT) file format",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ldt",
+      "aliases": ["LDT", "ldt"],
+      "extensions": [".ldt"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ldt",
+      "scopeName": "Language, labor, data, trasfer",
+      "path": "./syntaxes/ldt.tmLanguage.json"
+    }]
+  }
+}
