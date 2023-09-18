@@ -13,8 +13,7 @@
     "languages": [{
       "id": "ldt",
       "aliases": ["LDT", "ldt"],
-      "extensions": [".ldt"],
-      "configuration": "./language-configuration.json"
+      "extensions": [".ldt"]
     }],
     "grammars": [{
       "language": "ldt",

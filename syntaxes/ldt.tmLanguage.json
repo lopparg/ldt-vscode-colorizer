@@ -3,6 +3,9 @@
 	"name": "LDT",
 	"patterns": [
 		{
+			"include": "#comment"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -10,10 +13,34 @@
 		}
 	],
 	"repository": {
+		"comment": {
+			"begin": "<!--",
+			"captures": {
+				"0": {
+					"name": "punctuation.definition.comment.html"
+				}
+			},
+			"end": "-->",
+			"name": "comment.block.html",
+			"patterns": [
+				{
+					"match": "\\G-?>",
+					"name": "invalid.illegal.characters-not-allowed-here.html"
+				},
+				{
+					"match": "<!--(?!>)|<!-(?=-->)",
+					"name": "invalid.illegal.characters-not-allowed-here.html"
+				},
+				{
+					"match": "--!>",
+					"name": "invalid.illegal.characters-not-allowed-here.html"
+				}
+			]
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.ldt",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "(8000)"
 			}]
 		},
 		"strings": {
@@ -28,5 +55,5 @@
 			]
 		}
 	},
-	"scopeName": "Language, labor, data, trasfer"
+	"scopeName": "text.ldt"
 }
